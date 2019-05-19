@@ -8,3 +8,5 @@ just for fun project
 use this to print:
 
 [Print this](https://github.com/bobdinh139/WestCatholic3DLogo/blob/master/west3dprint.stl)
+
+or [this](https://github.com/bobdinh139/WestCatholic3DLogo/blob/master/for3DprintWestLogo.stl) (rounded corners)
