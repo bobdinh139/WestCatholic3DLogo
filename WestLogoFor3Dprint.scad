@@ -1,11 +1,17 @@
 
-a =-2;
+a =-2.5;
 b = a+0.5;
 c = abs(b);
 
-//the base (biggest cube)
-translate([-3.5,-2.5,a]) cube([11.5,11,0.5]);
+//the base (biggest cube) using minkowski to create rounded corners
+minkowski(){
+    //cube base
+translate([-3,-2,a]) cube([10.5,10,0.01]);
+    // cylinder
+cylinder([1,1,0.01]);
+}
 //the cube at the left side
+
 translate([-3,2.5,b])cube([1,1,c]);
 //the cube at mid
 translate([2.5,2.5,b])cube([1,1,c]);
