@@ -3,6 +3,8 @@ West Catholic high school 3D logo
 
 just for fun project
 
+_**Note:** the color is relative_
+
 [view 3D](https://github.com/bobdinh139/WestCatholic3DLogo/blob/master/westlogo.stl)
 
 <img src="preview/logo.png?raw=true" width="200">
