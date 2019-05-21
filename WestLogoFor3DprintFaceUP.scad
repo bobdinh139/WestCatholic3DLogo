@@ -8,24 +8,34 @@ union(){
 union(){
 union(){
 //the base (biggest cube) using minkowski to create rounded corners
+translate([0,0,0.5])resize([9,6,0.5]){
 minkowski(){
 //cube base
-translate([-2,-2,a]) cube([9,8,0.01]);
+translate([-0.35,-1,a]) cube([7,4,0.01]);
 // cylinder to merge with the cube base -> generate rounded corners
 cylinder([1,1,0.01]);
-}
+}}
 //first cube 
+translate([2,-1.25,1])cube([2,0.5,0.5]);
 translate([2.5,1.27,1])cube([1,0.75,5.5]);
+
 }
 //last cube
-translate([2.5,3.5,1])cube([1,0.5,8.65]);
+translate([6.75,2.25,1])cube([0.5,0.5,6.5]);
+translate([-1,2.25,1])cube([0.5,0.5,6.5]);
+
 }
 //right cube
 translate([1.75,0.01,1])cube([0.5,0.5,3]);
 
 //left cube
 translate([3.75,0.01,1])cube([0.5,0.5,3]);
+//two support cubes
+translate([5,-1,1])cube([0.5,0.5,1]);
+translate([0.5,-1,1])cube([0.5,0.5,1]);
 }
+
+
 
 // left triangle to merge with the bigger circle in order to create curves
 module tri_left(where){
@@ -111,20 +121,19 @@ module bottom_triangle(){
 translate([3,0,0]) {
     // rotate 90 degree z
 rotate([0,0,90]){ triangle(2.5,0.5,minimumEdge,1);}
-// mirror the triangle (the idea is that the bottom triangle is not right triangle but it can be created by two right triangle)
+// mirror the triagle (the idea is that the bottom triangle is not right but it can be created by two right triangle)
 mirror([1,0,0])rotate([0,0,90]){ triangle(2.5,0.5,minimumEdge,1);}
 }
 }
  
 //generate right triangle
 module triangle(a1,b1,r1,h1){
-    // use hull o merge 3 cylinders, which can be used to create triangle if the edge is minimum
+    // use hull o merge 3 cylinders 
  hull(){
      //create cylinder with radius r1 and height h1
      cylinder(r=r1,h=h1);
-     // create the second cylinder with a1 distance away from the x from the first cylinder
+     // create the second triagle 
      translate([a1,0,0])cylinder(r=r1,h=h1);
-     // create the third cylinder with b1 distance away from the y from the first cylinder
       translate([0,b1,0])cylinder(r=r1,h=h1);
  }
  
