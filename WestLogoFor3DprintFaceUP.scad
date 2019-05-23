@@ -20,9 +20,12 @@ translate([2,-1.25,1])cube([2,0.5,0.5]);
 translate([2.5,1.27,1])cube([1,0.75,5.5]);
 
 }
+//support the C
+translate([6.25,2,1])cube([1,0.7,6.65]);
+// support the curve
+translate([-1,2.25,1])cube([1,0.7,6.65]);
 //last cube
-translate([6.75,2.25,1])cube([0.5,0.5,6.5]);
-translate([-1,2.25,1])cube([0.5,0.5,6.5]);
+translate([2.5,3.25,1])cube([1,0.5,8.5]);
 
 }
 //right cube
@@ -31,8 +34,8 @@ translate([1.75,0.01,1])cube([0.5,0.5,3]);
 //left cube
 translate([3.75,0.01,1])cube([0.5,0.5,3]);
 //two support cubes
-translate([5,-1,1])cube([0.5,0.5,1]);
-translate([0.5,-1,1])cube([0.5,0.5,1]);
+translate([5,-1,1])cube([0.6,0.6,1]);
+translate([0.5,-1,1])cube([0.6,0.6,1]);
 }
 
 
@@ -63,13 +66,13 @@ difference(){
    }
    //merge inside left triangle with the circle
    hull(){
-   translate([3,3,0]) {cylinder(r=4,h=1);}
-   tri_left(-0.7);
+   translate([3,3,0]) {cylinder(r=3.75,h=1);}
+   tri_left(-0.55);
    }
 }
 
 // side cube to create the gap in "C"
-translate([6.5,1.5,0]){cube([2.5,3,1]);}
+translate([6,1.5,0]){cube([2.5,3,1]);}
 }
 }
 //cube - triagle(origin) - triangle(non origin) - triangle(bottom) - triangle(top)
