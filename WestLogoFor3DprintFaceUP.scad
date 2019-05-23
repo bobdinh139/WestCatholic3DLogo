@@ -22,8 +22,13 @@ translate([2.5,1.27,1])cube([1,0.75,5.5]);
 }
 //support the C
 translate([6.25,2,1])cube([1,0.7,6.65]);
+//additional support on the left
+translate([4.5,3,1])cube([1,0.7,8]);
+
 // support the curve
 translate([-1,2.25,1])cube([1,0.7,6.65]);
+// additional support an the right
+translate([0.5,3,1])cube([1,0.7,8]);
 //last cube
 translate([2.5,3.25,1])cube([1,0.5,8.5]);
 
@@ -33,8 +38,9 @@ translate([1.75,0.01,1])cube([0.5,0.5,3]);
 
 //left cube
 translate([3.75,0.01,1])cube([0.5,0.5,3]);
-//two support cubes
+//base support(bottom right C)
 translate([5,-1,1])cube([0.6,0.6,1]);
+//base support (bottom left C)
 translate([0.5,-1,1])cube([0.6,0.6,1]);
 }
 
